@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/resume-page/static/css/main.e90fec95.chunk.css",
+    "main.js": "/resume-page/static/js/main.a32668b4.chunk.js",
+    "main.js.map": "/resume-page/static/js/main.a32668b4.chunk.js.map",
+    "runtime-main.js": "/resume-page/static/js/runtime-main.c5c3276b.js",
+    "runtime-main.js.map": "/resume-page/static/js/runtime-main.c5c3276b.js.map",
+    "static/css/2.89db6a98.chunk.css": "/resume-page/static/css/2.89db6a98.chunk.css",
+    "static/js/2.93a8529b.chunk.js": "/resume-page/static/js/2.93a8529b.chunk.js",
+    "static/js/2.93a8529b.chunk.js.map": "/resume-page/static/js/2.93a8529b.chunk.js.map",
+    "index.html": "/resume-page/index.html",
+    "precache-manifest.07bcf37e70630189163685cf61f4d422.js": "/resume-page/precache-manifest.07bcf37e70630189163685cf61f4d422.js",
+    "service-worker.js": "/resume-page/service-worker.js",
+    "static/css/2.89db6a98.chunk.css.map": "/resume-page/static/css/2.89db6a98.chunk.css.map",
+    "static/css/main.e90fec95.chunk.css.map": "/resume-page/static/css/main.e90fec95.chunk.css.map",
+    "static/js/2.93a8529b.chunk.js.LICENSE.txt": "/resume-page/static/js/2.93a8529b.chunk.js.LICENSE.txt",
+    "static/media/calculator.png": "/resume-page/static/media/calculator.e2bfab9d.png",
+    "static/media/codeydu.jpg": "/resume-page/static/media/codeydu.755490b1.jpg",
+    "static/media/drum-machine.png": "/resume-page/static/media/drum-machine.d3db3614.png",
+    "static/media/emailViewer.png": "/resume-page/static/media/emailViewer.755106a5.png",
+    "static/media/font-awesome.min.css": "/resume-page/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/japan-population.png": "/resume-page/static/media/japan-population.e1633613.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c5c3276b.js",
+    "static/css/2.89db6a98.chunk.css",
+    "static/js/2.93a8529b.chunk.js",
+    "static/css/main.e90fec95.chunk.css",
+    "static/js/main.a32668b4.chunk.js"
+  ]
+}
