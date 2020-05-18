@@ -12,6 +12,8 @@ import EmailViewer from './images/emailViewer.png'
 import Calculator from './images/calculator.png'
 import DrumMachine from './images/drum-machine.png'
 import CodeyDu from './images/codeydu.jpg'
+import windowClose from './images/window-close-solid.svg'
+import text from './text.js'
 
 class App extends React.Component {
   constructor(props){
@@ -19,11 +21,26 @@ class App extends React.Component {
     this.state = {
       showIntro: false,
       showProject: false,
-      nextPage: false
+      nextPage: false,
+      toggleList: false,
+      language: 'english'
     }
     this.handleButton = this.handleButton.bind(this)
+    this.handleLanguage = this.handleLanguage.bind(this)
+    this.handleToggleList = this.handleToggleList.bind(this)
+  }
+  handleLanguage(e){
+    this.setState({language: e.target.id})
+  }
+  handleToggleList(e){
+    this.setState({
+      showIntro: false,
+      showProject: false,
+      toggleList: !this.state.toggleList
+    })
   }
   handleButton(e){
+    this.setState({toggleList: false})
     if(e.target.id === 'intro'){
       this.setState({showIntro: !this.state.showIntro})
     }
@@ -39,14 +56,31 @@ class App extends React.Component {
   
   return (
       <div className="App">
-        <NavBar />
-        <IntroSection handleButton={this.handleButton}/>
-        <ProjectSection handleButton={this.handleButton}/>
-        <IntroPage 
+        <NavBar 
+          text={text}
+          language={this.state.language}
+          handleLanguage={this.handleLanguage}
+          handleButton={this.handleButton}
+          handleToggleList={this.handleToggleList}
+          toggleList={this.state.toggleList}/>
+        <IntroSection
+          text={text}
+          language={this.state.language}
+          handleButton={this.handleButton}/>
+        <ProjectSection 
+          text={text}
+          language={this.state.language}
+          handleButton={this.handleButton}/>
+        <IntroPage
+          text={text}
+          language={this.state.language}
+          windowClose={windowClose}
           showIntro={this.state.showIntro} 
           handleButton={this.handleButton}
           CodeyDu={CodeyDu}/>
-        <ProjectPage 
+        <ProjectPage
+          text={text}
+          language={this.state.language}
           showProject={this.state.showProject}
           nextPage={this.state.nextPage}
           handleButton={this.handleButton}
@@ -54,7 +88,7 @@ class App extends React.Component {
           EmailViewer={EmailViewer}
           Calculator={Calculator}
           DrumMachine={DrumMachine}/>
-        <BottomBanner />
+        <BottomBanner/>
       </div>
     );
   }

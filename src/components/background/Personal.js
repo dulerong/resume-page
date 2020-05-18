@@ -2,15 +2,17 @@ import React from 'react'
 
 class PersonalBackground extends React.Component {
     render(){
+        let text = this.props.text
+        let language = this.props.language
         return(
-        <span className='border-1px width-50pct inline-block box-sizing'>
-            <p className='margin-20px font-family-lobster font-size-30px'>Personal Background</p>
-            <ul className='margin-20px'>
-              <li className='margin-b-10px'>Born in Taiwan, immigrated to Canada at age 13, year 2000</li>
-              <li className='margin-b-10px'>Lived, studied in Canada until age 25, year 2012</li>
-              <li className='margin-b-10px'>University of British Columbia, Bachelor of Chemical Engineering</li>
-              <li className='margin-b-10px'>Been living in Japan since 2014</li>
-              <li className='margin-b-10px'>Speaks 3 humans languages (Chinese, English, and Japanese)</li>
+        <span className='introFrame'>
+            <p className='margin-10px font-family-lobster font-size-30px'>{text[language].personalBackground.title}</p>
+            <ul className='margin-l-20px'>
+              <li className='margin-b-10px'>{text[language].personalBackground[1]}</li>
+              <li className='margin-b-10px'>{text[language].personalBackground[2]}</li>
+              <li className='margin-b-10px'>{text[language].personalBackground[3]}</li>
+              <li className='margin-b-10px'>{text[language].personalBackground[4]}</li>
+              <li className='margin-b-10px'>{text[language].personalBackground[5]}</li>
             </ul>
             <div className='text-align'><img className='max-w-40pct box-shadow ' src={this.props.CodeyDu} alt=''/></div>
         </span>
