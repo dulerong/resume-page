@@ -10,8 +10,8 @@ class ProjectPage extends React.Component {
         let language = this.props.language
 
         let slideBox = this.props.showProject? 
-        'position-absolute top-150 left-50 transform bg-white border-5px-pink border-radius height-75vh width-75vw transition overflow-responsive box-shadow' :
-        'position-absolute top-150 left-150 transform bg-white border-5px-pink border-radius height-75vh width-75vw transition overflow-responsive box-shadow'
+        'position-absolute top-50 left-50 transform bg-white border-5px-pink border-radius height-75vh width-75vw transition overflow-responsive box-shadow' :
+        'position-absolute top-50 left-150 transform bg-white border-5px-pink border-radius height-75vh width-75vw transition overflow-responsive box-shadow'
 
         let pageDisplay = this.props.nextPage?
         'position-relative flex-space-between box-sizing width-200pct height-100pct transition margin-l-minus100pct':
@@ -38,7 +38,7 @@ class ProjectPage extends React.Component {
 
         return(
         <div className={slideBox}>
-            <div className='desktop'>
+            <div className='desktop height-100pct'>
               <div className={pageDisplay}>
                 <JapanPop JapanPopulation={this.props.JapanPopulation}/>
                 <EmailUI EmailViewer={this.props.EmailViewer}/>

@@ -1,8 +1,6 @@
 import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar.js'
-import IntroPage from './components/IntroPage.js'
-import ProjectPage from './components/ProjectPage.js'
 import 'font-awesome/css/font-awesome.min.css'
 import BottomBanner from './components/BottomBanner.js'
 import IntroSection from './components/IntroSection.js'
@@ -66,19 +64,11 @@ class App extends React.Component {
         <IntroSection
           text={text}
           language={this.state.language}
-          handleButton={this.handleButton}/>
-        <ProjectSection 
-          text={text}
-          language={this.state.language}
-          handleButton={this.handleButton}/>
-        <IntroPage
-          text={text}
-          language={this.state.language}
-          windowClose={windowClose}
           showIntro={this.state.showIntro} 
           handleButton={this.handleButton}
+          windowClose={windowClose}
           CodeyDu={CodeyDu}/>
-        <ProjectPage
+        <ProjectSection 
           text={text}
           language={this.state.language}
           showProject={this.state.showProject}

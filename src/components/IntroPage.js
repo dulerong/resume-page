@@ -6,8 +6,8 @@ import Programming from './background/Programming.js'
 class IntroPage extends React.Component {
     render(){
         let slideBox = this.props.showIntro? 
-        'position-absolute top-50 left-50 transform bg-white border-5px-pink border-radius height-75vh width-75vw transition box-shadow' :
-        'position-absolute top-50 left-150 transform bg-white border-5px-pink border-radius height-75vh width-75vw transition box-shadow'
+        'position-absolute left-50 top-50 transform bg-white border-5px-pink border-radius height-75vh width-75vw transition box-shadow' :
+        'position-absolute left-150 top-50 transform bg-white border-5px-pink border-radius height-75vh width-75vw transition box-shadow'
 
         let text = this.props.text
         let language = this.props.language

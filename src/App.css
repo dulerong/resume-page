@@ -5,6 +5,9 @@ body {
   margin: 0;
   padding: 0;
   background-color: white;
+}
+.App {
+  position: relative;
   overflow-x: hidden;
 }
 button {
@@ -20,6 +23,7 @@ nav {
   position: fixed;
   top: 0px;
   width: 100%;
+  z-index: 9999;
 }
 ul {
   margin: 0;
@@ -38,6 +42,23 @@ a {
 h1 {
   text-align: center;
 }
+.bottomBanner{
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: small;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  color: white;
+}
+.bottomBannerInfo{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
 .imgDetail {
   background: rgba(0, 0, 0, 0.8);
   position: absolute;
@@ -51,7 +72,7 @@ h1 {
   transition: transform 0.5s;
 }
 .desktop {
-  height: 100%;
+  display: block;
 }
 .dropDownList {
   width: 100%;
@@ -263,6 +284,9 @@ h1 {
 .margin-r-20px {
   margin-right: 20px;
 }
+.margin-x-10px {
+  margin: 0px 10px 0px 10px;
+}
 .margin-x-20px {
   margin: 0px 20px 0px 20px;
 }
@@ -400,10 +424,15 @@ h1 {
 
 @media (max-width: 1000px) {
   nav {
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   h1 {
     font-size: 20px;
+  }
+  .bottomBanner{
+    height: 150px;
   }
   .desktop {
     display: none;
@@ -432,4 +461,6 @@ h1 {
     overflow: scroll;
   }
 }
+
+
 

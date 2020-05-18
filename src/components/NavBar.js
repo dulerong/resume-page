@@ -36,13 +36,13 @@ class NavBar extends React.Component {
               </li>
               <li className='border-b-1px text-align box-sizing' onClick={this.props.handleButton}>
                 <a 
-                  className='inline-block margin-x-20px padding-10px hover' 
+                  className='inline-block margin-x-10px padding-10px hover' 
                   id='english' onClick={this.props.handleLanguage} href='###'>ENGLISH</a>
                 <a 
-                  className='inline-block margin-x-20px padding-10px hover' 
+                  className='inline-block margin-x-10px padding-10px hover' 
                   id='chinese' onClick={this.props.handleLanguage} href='###'>中文</a>
                 <a 
-                  className='inline-block margin-x-20px padding-10px hover' 
+                  className='inline-block margin-x-10px padding-10px hover' 
                   id='japanese' onClick={this.props.handleLanguage} href='###'>日本語</a>
               </li>
             </ul>
