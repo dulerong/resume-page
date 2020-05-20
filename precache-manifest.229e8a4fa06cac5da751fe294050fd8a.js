@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7b73b6834e5001a982a1e8cc0913b54b",
+    "revision": "92fceb2d363f53d5317e068b225a774a",
     "url": "/resume-page/index.html"
   },
   {
-    "revision": "fef84003e8fe9f95c491",
+    "revision": "15a5c7e1831e27d7c327",
     "url": "/resume-page/static/css/2.89db6a98.chunk.css"
   },
   {
-    "revision": "333fb4d82017a9a5845c",
-    "url": "/resume-page/static/css/main.4aaae09c.chunk.css"
+    "revision": "a75acd85e43b4ed88d79",
+    "url": "/resume-page/static/css/main.fe8db47e.chunk.css"
   },
   {
-    "revision": "fef84003e8fe9f95c491",
-    "url": "/resume-page/static/js/2.5f46b08f.chunk.js"
+    "revision": "15a5c7e1831e27d7c327",
+    "url": "/resume-page/static/js/2.bc86d7de.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/resume-page/static/js/2.5f46b08f.chunk.js.LICENSE.txt"
+    "url": "/resume-page/static/js/2.bc86d7de.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "333fb4d82017a9a5845c",
-    "url": "/resume-page/static/js/main.9b05e453.chunk.js"
+    "revision": "a75acd85e43b4ed88d79",
+    "url": "/resume-page/static/js/main.a8feafd1.chunk.js"
   },
   {
     "revision": "8df38dfcbeea060cb768",
@@ -66,6 +66,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e1633613d030f38f634515230febde65",
     "url": "/resume-page/static/media/japan-population.e1633613.png"
+  },
+  {
+    "revision": "74e17e4bba5c93c3bea2c91cc2c77b00",
+    "url": "/resume-page/static/media/timer-clock.74e17e4b.png"
   },
   {
     "revision": "b1f2a76280a27ad7ff98924882c41e78",
