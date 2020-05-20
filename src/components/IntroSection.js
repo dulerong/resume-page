@@ -7,7 +7,7 @@ class IntroSection extends React.Component{
         let language = this.props.language
         return(
         <div className='flex-center position-relative height-100vh box-sizing border-b-1px' id='about'>
-            <p className='font-family-lobster font-size-30px'>{text[language].myNameIs}<i className="fa fa-bug"></i></p>
+            <p className='font-family-lobster font-size-30px'>{text[language].myNameIs}<i className="fa fa-bug" /></p>
             <p>
               <button 
                 id='intro'

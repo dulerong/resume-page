@@ -5,14 +5,13 @@ import Programming from './background/Programming.js'
 
 class IntroPage extends React.Component {
     render(){
-        let slideBox = this.props.showIntro? 
-        'position-absolute left-50 top-50 transform bg-white border-5px-pink border-radius height-75vh width-75vw transition box-shadow' :
-        'position-absolute left-150 top-50 transform bg-white border-5px-pink border-radius height-75vh width-75vw transition box-shadow'
+        let sldieBox = this.props.showIntro?
+        'introSlideBox left-50' : 'introSlideBox left-150'
 
         let text = this.props.text
         let language = this.props.language
         return(
-        <div className={slideBox}>
+        <div className={sldieBox}>
             <div className='desktop position-relative flex-space-between box-sizing height-100pct'>
               <Personal
                 text={this.props.text}
@@ -37,7 +36,7 @@ class IntroPage extends React.Component {
                 text={this.props.text}
                 language={this.props.language}/>
               <div
-                className='position-absolute left-100 top-0 transform-x font-size-30px hover-cursor' 
+                className='position-absolute left-100 top-0 transform-x-100pct font-size-30px hover-cursor' 
                 onClick={this.props.handleButton}>
                   <i id='intro' className="fa fa-window-close"></i>
               </div>

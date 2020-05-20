@@ -6,6 +6,9 @@ class NavBar extends React.Component {
         'mobile position-absolute top-75px left-0 font-color-white bg-gray width-100pct font-family-arial transition' :
         'mobile position-absolute top-75px left-minus100 font-color-white bg-gray width-100pct font-family-arial transition'
 
+        let menuClass = this.props.toggleList? '' : 'fa fa-bars hover'
+        let closeClass = this.props.toggleList? 'fa fa-times hover' : ''
+
         let text = this.props.text
         let language = this.props.language
         return(
@@ -25,7 +28,8 @@ class NavBar extends React.Component {
               </ul>
             </span>
             <div className='menu-toggle font-size-30px'>
-                <i id='toggleList' className="fa fa-bars hover" onClick={this.props.handleToggleList}/>
+                <i id='toggleList' className={menuClass} onClick={this.props.handleToggleList}/>
+                <i id='toggleList' className={closeClass} onClick={this.props.handleToggleList}/>
             </div>
             <ul className={toggleList}>
               <li className='border-b-1px text-align hover' onClick={this.props.handleButton}>

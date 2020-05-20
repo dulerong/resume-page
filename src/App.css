@@ -9,6 +9,7 @@ body {
 .App {
   position: relative;
   overflow-x: hidden;
+  
 }
 button {
   border: none;
@@ -23,7 +24,7 @@ nav {
   position: fixed;
   top: 0px;
   width: 100%;
-  z-index: 9999;
+  z-index: 10;
 }
 ul {
   margin: 0;
@@ -79,11 +80,36 @@ h1 {
   background-color: black;
   display: none;
 }
+.introSlideBox {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: solid 5px pink;
+  border-radius: 5px;
+  height: 75vh;
+  width: 75vw;
+  transition: 0.5s;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
 .introFrame {
   border: solid 1px;
   width: 50%;
   display: inline-block;
   box-sizing: border-box;
+}
+.projectSlideBox {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: solid 5px pink;
+  border-radius: 5px;
+  height: 75vh;
+  width: 75vw;
+  transition: 0.5s;
+  overflow: hidden;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 .projectImg {
   width: 500px;
@@ -91,10 +117,58 @@ h1 {
 }
 .projectFrame {
   border: solid 1px;
-  width: 25%;
+  width: 16.67%;
   display: inline-block;
   box-sizing: border-box;
   position: relative;
+}
+.projectNextPage {
+  position: fixed;
+  right: 0%;
+  background: rgba(0, 0, 0, 0);
+  height: 100%;
+  width: 100px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+}
+.projectNextPage:hover{
+  background: rgba(0, 0, 0, 0.5);
+}
+.projectPrevPage {
+  position: fixed;
+  left: 0%;
+  background: rgba(0, 0, 0, 0);
+  height: 100%;
+  width: 100px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+}
+.projectPrevPage:hover{
+  background: rgba(0, 0, 0, 0.5);
+}
+.pageDisplay{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 300%;
+  height: 100%;
+  transition: 0.5s;
+}
+.page1{
+  margin-left: 0%;
+}
+.page2{
+  margin-left: -100%;
+}
+.page3{
+  margin-left: -200%;
 }
 .menu-toggle {
   display: none;
@@ -191,8 +265,14 @@ h1 {
 .font-size-small {
   font-size: small;
 }
+.font-size-3vw {
+  font-size: 3vw;
+}
 .font-size-20px {
   font-size: 20px;
+}
+.font-size-25px {
+  font-size: 25px;
 }
 .font-size-30px {
   font-size: 30px;
@@ -305,9 +385,6 @@ h1 {
 .overflow {
   overflow: hidden;
 }
-.overflow-responsive {
-  overflow: hidden;
-}
 .overflow-scroll {
   overflow: scroll;
 }
@@ -373,7 +450,10 @@ h1 {
 .transform {
   transform: translate(-50%, -50%);
 }
-.transform-x{
+.transform-x-50pct{
+  transform: translateX(-50%)
+}
+.transform-x-100pct{
   transform: translateX(-100%)
 }
 .transform-XY-50pct{
@@ -431,6 +511,11 @@ h1 {
   h1 {
     font-size: 20px;
   }
+  .introSlideBox{
+    width: 90vw;
+    height: 90vh;
+    z-index: 11;
+  }
   .bottomBanner{
     height: 150px;
   }
@@ -450,15 +535,18 @@ h1 {
     display: inline-block;
     box-sizing: border-box;
   }
+  .projectSlideBox {
+    height: 90vh;
+    width: 90vw;
+    z-index: 11;
+    overflow: scroll;
+  }
   .projectImg {
     max-width: 90%;
   }
   .projectFrame {
     width: 100%;
-    height: 25%;
-  }
-  .overflow-responsive{
-    overflow: scroll;
+    height: 100%;
   }
 }
 

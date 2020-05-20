@@ -19,13 +19,19 @@ class ProjectSection extends React.Component {
             <ProjectPage
               text={text}
               language={language}
+              firstPage={this.props.firstPage}
+              lastPage={this.props.lastPage}
+              pageNumber={this.props.pageNumber}
               showProject={this.props.showProject}
               nextPage={this.props.nextPage}
+              handlePage={this.props.handlePage}
               handleButton={this.props.handleButton}
               JapanPopulation={this.props.JapanPopulation}
               EmailViewer={this.props.EmailViewer}
               Calculator={this.props.Calculator}
-              DrumMachine={this.props.DrumMachine}/>
+              DrumMachine={this.props.DrumMachine}
+              TimerClock={this.props.TimerClock}
+              RandomQuote={this.props.RandomQuote}/>
         </div>
         )
     }
