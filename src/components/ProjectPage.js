@@ -15,15 +15,16 @@ class ProjectPage extends React.Component {
         'projectSlideBox left-50' : 'projectSlideBox left-150'
 
         let pageDisplay = 'pageDisplay page'+this.props.pageNumber
+        let mobilePageDisplay = 'pageDisplay page'+this.props.mobilePageNumber
 
-        let mobilePageDisplay = 'border-1px box-sizing width-100pct height-100pct'
-
-        let closePageButton = this.props.nextPage?
-        'position-fixed left-50 bottom-0 transform-x-50pct width-150px padding-y-10px bg-black font-color-white hover transition':
-        'position-fixed left-50 bottom-0 transform-x-50pct width-150px padding-y-10px bg-black font-color-white hover transition'
+        let closePageButton = 
+        'position-absolute left-50 bottom-0 transform-x-50pct width-150px padding-y-10px bg-black font-color-white hover transition'
 
         let projectPrevPage = this.props.pageNumber === this.props.firstPage ? 'display-none' : 'projectPrevPage'
         let projectNextPage = this.props.pageNumber === this.props.lastPage ? 'display-none' : 'projectNextPage'
+        
+        let mobileProjectPrevPage = this.props.mobilePageNumber === this.props.mobileFirstPage ? 'display-none' : 'projectPrevPage'
+        let mobileProjectNextPage = this.props.mobilePageNumber === this.props.mobileLastPage ? 'display-none' : 'projectNextPage'
 
         return(
         <div className={slideBox}>
@@ -35,12 +36,11 @@ class ProjectPage extends React.Component {
                 <DrumMachine DrumMachine={this.props.DrumMachine}/>
                 <TimerClock TimerClock={this.props.TimerClock}/>
                 <RandomQuote RandomQuote={this.props.RandomQuote}/>
-                <button
-                  id='project'
-                  className={closePageButton}
+                <div
+                  className='position-absolute left-50 bottom-0 transform-x-50pct font-size-30px hover-cursor' 
                   onClick={this.props.handleButton}>
-                    {text[language].clickToClose}
-                </button>
+                    <i id='project' className="fa fa-window-close"></i>
+                </div>
                 <div onClick={this.props.handlePage} id='prevPage' className={projectPrevPage}>
                   <i id='prevPage' className="fa fa-arrow-left" />
                 </div>
@@ -58,9 +58,15 @@ class ProjectPage extends React.Component {
                 <TimerClock TimerClock={this.props.TimerClock}/>
                 <RandomQuote RandomQuote={this.props.RandomQuote}/>
                 <div
-                  className='position-absolute left-100 top-0 transform-x-100pct font-size-30px hover-cursor' 
+                  className='position-absolute left-50 bottom-0 transform-x-50pct font-size-30px hover-cursor' 
                   onClick={this.props.handleButton}>
                     <i id='project' className="fa fa-window-close"></i>
+                </div>
+                <div onClick={this.props.handleMobilePage} id='mobilePrevPage' className={mobileProjectPrevPage}>
+                  <i id='mobilePrevPage' className="fa fa-arrow-left" />
+                </div>
+                <div onClick={this.props.handleMobilePage} id='mobileNextPage' className={mobileProjectNextPage}>
+                  <i id='mobileNextPage' className="fa fa-arrow-right" />
                 </div>
               </div>
             </div>

@@ -19,6 +19,10 @@ class ProjectSection extends React.Component {
             <ProjectPage
               text={text}
               language={language}
+              handleMobilePage={this.props.handleMobilePage}
+              mobileFirstPage={this.props.mobileFirstPage}
+              mobileLastPage={this.props.mobileLastPage}
+              mobilePageNumber={this.props.mobilePageNumber}
               firstPage={this.props.firstPage}
               lastPage={this.props.lastPage}
               pageNumber={this.props.pageNumber}

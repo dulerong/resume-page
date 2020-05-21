@@ -25,12 +25,16 @@ class App extends React.Component {
       pageNumber: 1,
       firstPage: 1,
       lastPage: 3,
+      mobilePageNumber: 1,
+      mobileFirstPage: 1,
+      mobileLastPage: 6,
       toggleList: false,
       language: 'english'
     }
     this.handleButton = this.handleButton.bind(this)
     this.handleLanguage = this.handleLanguage.bind(this)
     this.handlePage = this.handlePage.bind(this)
+    this.handleMobilePage = this.handleMobilePage.bind(this)
     this.handleToggleList = this.handleToggleList.bind(this)
   }
   handlePage(e){
@@ -43,6 +47,14 @@ class App extends React.Component {
       this.state.pageNumber === this.state.firstPage ?
         this.setState({pageNumber: this.state.lastPage}) :
         this.setState({pageNumber: this.state.pageNumber-1})
+    }
+  }
+  handleMobilePage(e){
+    if(e.target.id === 'mobileNextPage'){
+        this.setState({mobilePageNumber: this.state.mobilePageNumber+1})
+    }
+    if(e.target.id === 'mobilePrevPage'){
+        this.setState({mobilePageNumber: this.state.mobilePageNumber-1})
     }
   }
   handleLanguage(e){
@@ -89,6 +101,10 @@ class App extends React.Component {
         <ProjectSection 
           text={text}
           language={this.state.language}
+          handleMobilePage={this.handleMobilePage}
+          mobileFirstPage={this.state.mobileFirstPage}
+          mobileLastPage={this.state.mobileLastPage}
+          mobilePageNumber={this.state.mobilePageNumber}
           firstPage={this.state.firstPage}
           lastPage={this.state.lastPage}
           pageNumber={this.state.pageNumber}

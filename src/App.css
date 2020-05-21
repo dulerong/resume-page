@@ -153,7 +153,6 @@ h1 {
   background: rgba(0, 0, 0, 0.5);
 }
 .pageDisplay{
-  position: relative;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
@@ -169,6 +168,15 @@ h1 {
 }
 .page3{
   margin-left: -200%;
+}
+.page4{
+  margin-left: -300%;
+}
+.page5{
+  margin-left: -400%;
+}
+.page6{
+  margin-left: -500%;
 }
 .menu-toggle {
   display: none;
@@ -535,11 +543,13 @@ h1 {
     display: inline-block;
     box-sizing: border-box;
   }
+  .pageDisplay{
+    width: 600%;
+  }
   .projectSlideBox {
     height: 90vh;
     width: 90vw;
     z-index: 11;
-    overflow: scroll;
   }
   .projectImg {
     max-width: 90%;

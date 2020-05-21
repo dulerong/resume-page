@@ -11,12 +11,16 @@ class EmailUI extends React.Component {
             <div className='imgDetail'>
                 <h1>Title: Email Viewer UI</h1>
                 <p className='margin-b-10px'>Views emails, available in both desktop and mobile view</p>
+                <p className='margin-b-10px'>Sorts email list by sender/receiver/subject/date by clicking each</p>
+                <p className='margin-b-10px'>Filters email by dates, using search bar</p>
                 <p>Front-End: React.js</p>
                 <div className='text-align margin-10px'>
                   <a 
-                    href="###"
-                    className='inline-block bg-white font-color-black padding-10px '>
-                    Currently under review for interview!
+                    href="https://dulerong.github.io/email-user-interface/"
+                    className='inline-block bg-white font-color-black padding-10px'
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    CLICK TO SEE!
                   </a>
                 </div>
               </div>
