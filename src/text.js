@@ -31,6 +31,32 @@ const text = {
             mainTitle: 'Here are my projects...',
             nextPageButton: 'Next Page',
             prevPageButton: 'Previous Page'
+        },
+        projectJapanPop: {
+            0: 'Japan Population Chart',
+            1: 'Title: Japan Population Chart',
+            2: 'Graphs individual Japanese 47 prefecture population growth against years (1960-2045).',
+            3: 'Makes individual, single API call when a prefecture button is clicked.',
+            4: 'Front-End: React.js',
+            5: 'Graph Library: Recharts',
+            6: 'API-Call: Axios',
+            7: 'CLICK TO SEE'
+        },
+        projectEmailUI: {
+            0: 'Email Viewer UI',
+            1: 'Title: Email Viewer UI',
+            2: 'Views emails, available in both desktop and mobile view',
+            3: 'Sorts email list by sender/receiver/subject/date by clicking each',
+            4: 'Filters email by dates, using search bar',
+            5: 'Front-End: React.js',
+            6: 'CLICK TO SEE!'
+        },
+        projectCalculator: {
+            0: 'Calculator',
+            1: 'Title: Calculator UI',
+            2: 'Modeled to work as a real Calculator',
+            3: 'Front-End: React.js',
+            4: 'CLICK TO SEE',
         }
     },
     chinese: {
@@ -65,11 +91,37 @@ const text = {
             mainTitle: '來看看我的專案吧!...',
             nextPageButton: '下一頁',
             prevPageButton: '上一頁'
+        },
+        projectJapanPop: {
+            0: '日本人口成長圖',
+            1: '標題: 日本人口成長圖',
+            2: '顯示日本47縣市的年別次人口成長 (1960-2045).',
+            3: '任一縣市的Check Box選擇後，網頁會API CALL去蒐集該縣市數據',
+            4: '前端: React.js',
+            5: '圖表: Recharts',
+            6: 'API-Call: Axios',
+            7: '按一下看看它!'
+        },
+        projectEmailUI: {
+            0: '電子郵件瀏覽器介面',
+            1: '標題: Email瀏覽器介面',
+            2: '桌上以及手機瀏覽介面都有!',
+            3: '可以Email寄件人, 收信人, 主題, 日期排列郵件(點擊後排列)',
+            4: '可以Email日期篩選瀏覽郵件(頁面上方日期輸入選項)',
+            5: '前端: React.js',
+            6: '按一下看看它!'
+        },
+        projectCalculator: {
+            0: '計算機介面',
+            1: '標題: 計算機',
+            2: '計算機為主題的單頁應用程式Single Page Application',
+            3: '前端: React.js',
+            4: '按一下看看它!',
         }
     },
     japanese: {
         myNameIs: 'Codey です...',
-        clickToKnowCodey: '押して CODEYのことをもっと知ろう',
+        clickToKnowCodey: '押してCODEYのことを見よう！',
         clickToSeeProjects: '押して過去のプロジェクトを見よう！',
         logo: 'CODEYの仕事探しを手伝おう！',
         aboutMe: 'CODEYとは？',
@@ -78,8 +130,8 @@ const text = {
         clickToClose: '閉じる',
         personalBackground: {
             title: '自分について',
-            1: '台灣出身, 13歲時移民加拿大, 西元2000年',
-            2: '台湾生まれ, 2000年頃13歳時カナダに移民',
+            1: '台湾生まれ, 2000年頃13歳時カナダに移民',
+            2: 'カナダにて25歳まで過ごし, 2012年まで',
             3: 'カナダBC省立大学卒業, 化学工学学士',
             4: '2014年以降日本に在住',
             5: '三つの人間言語に詳しい (中国語, 英語, 日本語)'},
@@ -99,6 +151,32 @@ const text = {
             mainTitle: 'どうぞ過去のプロジェクトを...',
             nextPageButton: '次のページ',
             prevPageButton: '前のページ'
+        },
+        projectJapanPop: {
+            0: '日本都道府県人口推移図',
+            1: '標題: 日本都道府県人口推移図',
+            2: '日本47都道府県の年別人口成長推移傾向を表す図表 (1960-2045).',
+            3: '各都道府県のチェックボックスを選択するとAPI-CALLが発生, 該当データを取り込む.',
+            4: 'フロントエンド: React.js',
+            5: 'グラフィング: Recharts',
+            6: 'API-Call: Axios',
+            7: '押して閲覧！'
+        },
+        projectEmailUI: {
+            0: 'メール閲覧器ＵＩ',
+            1: '標題: メール閲覧器ＵＩ',
+            2: 'デスクトップ及びモバイル閲覧可（画面サイズ調整後体験できる）',
+            3: 'メールリストを送信者, 受信者, 主題, 日付で並び替え可（各項目をクリック）',
+            4: 'メールリストを日付でフィルター可',
+            5: 'フロントエンド: React.js',
+            6: '押して閲覧！'
+        },
+        projectCalculator: {
+            0: '計算機',
+            1: '標題: 計算機ＵＩ',
+            2: '計算機をイメージにしたSPA (SINGLE PAGE APPLICATION)',
+            3: 'フロントエンド: React.js',
+            4: '押して閲覧！',
         }
     }
 }

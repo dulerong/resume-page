@@ -17,9 +17,6 @@ class ProjectPage extends React.Component {
         let pageDisplay = 'pageDisplay page'+this.props.pageNumber
         let mobilePageDisplay = 'pageDisplay page'+this.props.mobilePageNumber
 
-        let closePageButton = 
-        'position-absolute left-50 bottom-0 transform-x-50pct width-150px padding-y-10px bg-black font-color-white hover transition'
-
         let projectPrevPage = this.props.pageNumber === this.props.firstPage ? 'display-none' : 'projectPrevPage'
         let projectNextPage = this.props.pageNumber === this.props.lastPage ? 'display-none' : 'projectNextPage'
         
@@ -30,12 +27,12 @@ class ProjectPage extends React.Component {
         <div className={slideBox}>
             <div className='desktop height-100pct'>
               <div className={pageDisplay}>
-                <JapanPop JapanPopulation={this.props.JapanPopulation}/>
-                <EmailUI EmailViewer={this.props.EmailViewer}/>
-                <Calculator Calculator={this.props.Calculator}/>
-                <DrumMachine DrumMachine={this.props.DrumMachine}/>
-                <TimerClock TimerClock={this.props.TimerClock}/>
-                <RandomQuote RandomQuote={this.props.RandomQuote}/>
+                <JapanPop JapanPopulation={this.props.JapanPopulation} text={text} language={language}/>
+                <EmailUI EmailViewer={this.props.EmailViewer} text={text} language={language}/>
+                <Calculator Calculator={this.props.Calculator} text={text} language={language}/>
+                <DrumMachine DrumMachine={this.props.DrumMachine} text={text} language={language}/>
+                <TimerClock TimerClock={this.props.TimerClock} text={text} language={language}/>
+                <RandomQuote RandomQuote={this.props.RandomQuote} text={text} language={language}/>
                 <div
                   className='position-absolute left-50 bottom-0 transform-x-50pct font-size-30px hover-cursor' 
                   onClick={this.props.handleButton}>
@@ -51,12 +48,12 @@ class ProjectPage extends React.Component {
             </div>
             <div className='mobile height-100pct'>
               <div className={mobilePageDisplay}>
-                <JapanPop JapanPopulation={this.props.JapanPopulation}/>
-                <EmailUI EmailViewer={this.props.EmailViewer}/>
-                <Calculator Calculator={this.props.Calculator}/>
-                <DrumMachine DrumMachine={this.props.DrumMachine}/>
-                <TimerClock TimerClock={this.props.TimerClock}/>
-                <RandomQuote RandomQuote={this.props.RandomQuote}/>
+                <JapanPop JapanPopulation={this.props.JapanPopulation} text={text} language={language}/>
+                <EmailUI EmailViewer={this.props.EmailViewer} text={text} language={language}/>
+                <Calculator Calculator={this.props.Calculator} text={text} language={language}/>
+                <DrumMachine DrumMachine={this.props.DrumMachine} text={text} language={language}/>
+                <TimerClock TimerClock={this.props.TimerClock} text={text} language={language}/>
+                <RandomQuote RandomQuote={this.props.RandomQuote} text={text} language={language}/>
                 <div
                   className='position-absolute left-50 bottom-0 transform-x-50pct font-size-30px hover-cursor' 
                   onClick={this.props.handleButton}>

@@ -2,26 +2,28 @@ import React from 'react'
 
 class JapanPop extends React.Component {
     render(){
+      let text = this.props.text
+      let language = this.props.language
         return(
         <span className='projectFrame hover-display-detail hover-transform-scale font-family-arial'>
-            <p className='margin-20px font-family-lobster font-size-30px'>Japan Population Chart</p>
+            <p className='margin-20px font-family-lobster font-size-30px'>{text[language].projectJapanPop[0]}</p>
             <div className='flex-center overflow position-relative'>
               <img className='projectImg' src={this.props.JapanPopulation} alt=''/>
             </div>
             <div className='imgDetail'>
-                <h1>Title: Japan Population Chart</h1>
-                <p className='margin-b-10px'>Graphs individual Japan's 47 prefecture population growth against years (1960-2045).</p>
-                <p className='margin-b-10px'>Makes individual, single API call when a prefecture button is clicked.</p>
-                <p>Front-End: React.js</p>
-                <p>Graph Library: Recharts</p>
-                <p>API-Call: Axios</p>
+                <h1>{text[language].projectJapanPop[1]}</h1>
+                <p className='margin-b-10px'>{text[language].projectJapanPop[2]}</p>
+                <p className='margin-b-10px'>{text[language].projectJapanPop[3]}</p>
+                <p>{text[language].projectJapanPop[4]}</p>
+                <p>{text[language].projectJapanPop[5]}</p>
+                <p>{text[language].projectJapanPop[6]}</p>
                 <div className='text-align margin-10px'>
                   <a 
                     className='inline-block bg-white font-color-black padding-10px ' 
                     href="https://dulerong.github.io/japan-population/" 
                     target="_blank"
                     rel="noopener noreferrer">
-                    CLICK TO SEE
+                    {text[language].projectJapanPop[7]}
                   </a>
                 </div>
               </div>
