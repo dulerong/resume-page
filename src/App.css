@@ -6,14 +6,49 @@ body {
   padding: 0;
   background-color: white;
 }
-.App {
-  position: relative;
-  overflow-x: hidden;
-  
+p {
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3 {
+  text-align: center;
+}
+a {
+  text-decoration: none
 }
 button {
   border: none;
   outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+button:hover {
+  background-color: chocolate;
+}
+.fa {
+  transition: 0.5s;
+}
+.fa-bars, .fa-times, .fa-window-close {
+  cursor: pointer;
+}
+.fa-bars:hover {
+  color: chocolate;
+}
+.fa-times:hover {
+  color: chocolate;
+}
+.fa-window-close:hover {
+  color: chocolate;
+}
+.App {
+  position: relative;
+  overflow-x: hidden;
+}
+.desktop {
+  display: block;
+}
+.mobile {
+  display: none;
 }
 nav {
   display: flex;
@@ -25,23 +60,146 @@ nav {
   top: 0px;
   width: 100%;
   z-index: 10;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 75px;
+  text-align: center;
 }
-ul {
+nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
   box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
 }
-p {
-  margin: 0;
-  padding: 0;
+nav ul li {
+  width: 120px;
 }
-a {
+nav ul li a {
   text-decoration: none;
   color: white;
+  display: inline-block;
+  width: 100%;
 }
-h1 {
+nav ul li:hover {
+  cursor: pointer;
+  background-color: chocolate;
+  transition: 0.5s;
+}
+nav ul li:hover .dropDownList{
+  display: block;
+  cursor: pointer;
+}
+nav ul li .dropDownList {
+  width: 100%;
+  background-color: black;
+  display: none;
+}
+nav ul li .dropDownList li {
+  border-bottom: solid white 1px;
+}
+.closeButton {
+  z-index: 20;
+}
+.introSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  box-sizing: border-box;
+  border-bottom: solid 1px;
+}
+.introSection .title {
+  font-family: lobster;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+.introSection button {
+  padding: 10px 30px 10px 30px;
+  background-color: black;
+  color: white;
+}
+.introSection button:hover {
+  background-color: chocolate;
+}
+.introSlideBox {
+  position: absolute;
+  top: 53%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 75vw;
+  height: 75vh;
+  transition: 0.5s;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.introSlideBox .introContainer {
+  width: 50vw;
+  height: 100%;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  overflow: hidden;
+}
+.introSlideBox .introContainer .introPageDisplay {
+  width: 200%;
+  height: 100%;
+  display: flex;
+  transition: 0.5s;
+}
+.introFrame {
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif
+}
+.introFrame h1 {
+  margin: 10px;
+  font-family: lobster;
+}
+.introFrame h3 {
+  margin: 10px;
+  font-family: lobster;
+}
+.introFrame p {
+  margin-left: 20px;
+}
+.introFrame ul li {
+  margin-bottom: 10px
+}
+.introFrame .myPhoto {
   text-align: center;
+}
+.introFrame .myPhoto img {
+  max-width: 200px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.projectSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  box-sizing: border-box;
+  border-bottom: solid 1px;
+}
+.projectSection .title {
+  font-family: lobster;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+.projectSection button {
+  padding: 10px 30px 10px 30px;
+  background-color: black;
+  color: white;
+}
+.projectSection button:hover {
+  background-color: chocolate;
 }
 .bottomBanner{
   height: 75px;
@@ -60,70 +218,88 @@ h1 {
   justify-content: space-around;
   align-items: center;
 }
-.imgDetail {
+.projectSlideBox {
+  width: 90vw;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+  box-sizing: border-box;
+}
+.projectSlideBox .projectContainer {
+  background-color: white;
+  border-radius: 5px;
+  width: 70vw;
+  height: 100%;
+  transition: 0.5s;
+  overflow: hidden;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  position: relative;
+}
+.projectSlideBox .projectContainer .pageDisplay{
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 600%;
+  height: 100%;
+  transition: 0.5s;
+}
+.projectFrame {
+  width: 16.67%;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.projectFrame .projectImg {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.projectFrame .projectImg img{
+  max-width: 600px;
+  max-height: 375px;
+}
+.projectFrame h1 {
+  margin: 10px;
+  font-family: lobster;
+}
+.projectFrame .imgDetail {
   background: rgba(0, 0, 0, 0.8);
   position: absolute;
   color:white;
   top: 10px;
   bottom: 10px;
-  left: 10px;
-  right: 10px;
+  left: 200px;
+  right: 200px;
   padding: 20px;
   transform: scaleY(0);
   transition: transform 0.5s;
 }
-.desktop {
-  display: block;
+.projectFrame:hover .imgDetail{
+  transform: scaleY(1);
 }
-.dropDownList {
-  width: 100%;
-  background-color: black;
-  display: none;
+.projectFrame .imgDetail p {
+  margin-bottom: 10px;
 }
-.introSlideBox {
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  border: solid 5px pink;
-  border-radius: 5px;
-  height: 75vh;
-  width: 75vw;
-  transition: 0.5s;
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+.projectFrame .imgDetail .link {
+  text-align: center;
 }
-.introFrame {
-  border: solid 1px;
-  width: 50%;
+.projectFrame .imgDetail .link a {
   display: inline-block;
-  box-sizing: border-box;
-}
-.projectSlideBox {
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
   background-color: white;
-  border: solid 5px pink;
-  border-radius: 5px;
-  height: 75vh;
-  width: 75vw;
-  transition: 0.5s;
-  overflow: hidden;
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  color: black;
+  padding: 10px;
 }
-.projectImg {
-  width: 500px;
-  max-height: 375px;
-}
-.projectFrame {
-  border: solid 1px;
-  width: 16.67%;
-  display: inline-block;
-  box-sizing: border-box;
-  position: relative;
-}
-.projectNextPage {
-  position: fixed;
+.nextPage {
+  position: absolute;
   right: 0%;
   background: rgba(0, 0, 0, 0);
   height: 100%;
@@ -133,12 +309,16 @@ h1 {
   justify-content: center;
   align-items: center;
   font-size: xx-large;
+  z-index: 10;
 }
-.projectNextPage:hover{
+.nextPage:hover{
   background: rgba(0, 0, 0, 0.5);
 }
-.projectPrevPage {
-  position: fixed;
+.nextPage:hover .fa-arrow-right {
+  color: chocolate;
+}
+.prevPage {
+  position: absolute;
   left: 0%;
   background: rgba(0, 0, 0, 0);
   height: 100%;
@@ -148,17 +328,36 @@ h1 {
   justify-content: center;
   align-items: center;
   font-size: xx-large;
+  z-index: 10;
 }
-.projectPrevPage:hover{
+.prevPage:hover{
   background: rgba(0, 0, 0, 0.5);
 }
-.pageDisplay{
+.prevPage:hover .fa-arrow-left {
+  color: chocolate;
+}
+.closeButton {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 30px;
+  cursor: pointer;
+}
+.dotDisplay {
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
-  width: 300%;
-  height: 100%;
+}
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
   transition: 0.5s;
+  margin-right: 10px;
 }
 .page1{
   margin-left: 0%;
@@ -182,9 +381,7 @@ h1 {
   display: none;
   color: white;
   line-height: 75px;
-}
-.mobile {
-  display: none;
+  font-size: 30px;
 }
 .bg-black {
   background-color: black;
@@ -218,9 +415,6 @@ h1 {
 }
 .bottom-0 {
   bottom: 0%;
-}
-.box-shadow {
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 .box-sizing {
   box-sizing: border-box;
@@ -309,24 +503,12 @@ h1 {
 .height-75px {
   height: 75px;
 }
-.hover:hover {
-  background-color: #323038;
-  cursor: pointer;
-}
+
 .hover-cursor:hover {
   cursor: pointer;
 }
-.hover-display-dropDownList:hover .dropDownList{
-  display: block;
-  cursor: pointer;
-}
-.hover-display-detail:hover .imgDetail{
-  transform: scaleY(1);
-}
-.hover-transform-scale:hover .projectImg{
-  transform: scale(1.1);
-  transition: 1.5s;
-}
+
+
 .inline-block {
   display: inline-block;
 }
@@ -347,9 +529,6 @@ h1 {
 }
 .left-minus100 {
   left: -100%;
-}
-.line-height-75px {
-  line-height: 75px;
 }
 .margin-0 {
   margin: 0px;
@@ -511,54 +690,156 @@ h1 {
 }
 
 @media (max-width: 1000px) {
-  nav {
-    justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  h1 {
-    font-size: 20px;
-  }
-  .introSlideBox{
-    width: 90vw;
-    height: 90vh;
-    z-index: 11;
-  }
-  .bottomBanner{
-    height: 150px;
-  }
   .desktop {
     display: none;
-  }
-  .menu-toggle {
-    display: inline-block
   }
   .mobile {
     display: block;
   }
+  nav {
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 1;
+  }
+  nav ul {
+    display: block;
+    position: absolute;
+    background-color: #535258;
+    left: -100%;
+    top: 75px;
+    width: 100%;
+    transition: 0.5s;
+  }
+  nav ul.active {
+    left: 0;
+  }
+  nav ul li {
+    width: 100%;
+  }
+  nav ul li:hover .dropDownList {
+    background-color: #69676e;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 225px;
+  }
+  .dotDisplay {
+    bottom: 3%;
+    z-index: 20;
+  }
+  .introSlideBox {
+    width: 95vw;
+    height: 80vh;
+    top: 50%;
+    z-index: 20;
+  }
+  .introSlideBox .introContainer {
+    width: 100%;
+    height: 100%;
+  }
+  .introSlideBox .introContainer .introPageDisplay {
+    width: 200%;
+  }
   .introFrame {
     border: solid 1px;
-    width: 100%;
+    width: 50%;
     height: 100%;
     display: inline-block;
     box-sizing: border-box;
+  }
+  .menu-toggle {
+    display: inline-block
   }
   .pageDisplay{
     width: 600%;
   }
   .projectSlideBox {
-    height: 90vh;
-    width: 90vw;
-    z-index: 11;
+    background-color: gray;
+    height: 75vh;
+    width: 95vw;
+    z-index: 20;
   }
-  .projectImg {
-    max-width: 90%;
+  .projectSlideBox .projectContainer {
+    height: 100%;
+    width: 100%;
   }
   .projectFrame {
     width: 100%;
     height: 100%;
   }
+  .projectFrame .imgDetail {
+    left: 50px;
+    right: 50px;
+  }
+  .bottomBanner{
+    height: 150px;
+  }
+}
+@media (max-width: 700px) {
+  .introSlideBox {
+    height: 100vh;
+  }
+  .introFrame ul li {
+    font-size: 13px;
+  }
+  .introFrame h3 {
+    margin: 10px;
+    font-family: lobster;
+    font-size: 17px;
+  }
+  .introSection .title {
+    font-size: 23px;
+  }
+  .projectSection .title {
+    font-size: 23px;
+  }
+  .projectSlideBox {
+    height: 100vh;
+  }
+  .projectFrame h1 {
+    font-size: 25px;
+  }
+  .projectFrame h2 {
+    font-size: 20px;
+  }
+  .projectFrame .projectImg img{
+    max-width: 350px;
+    max-height: 350px;
+  }
+  .projectFrame .imgDetail {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+  }
 }
 
+@media (max-height: 400px) {
+  nav ul {
+    display: flex;
+  }
+  nav ul li:hover .dropDownList {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 75px;
+  }
+  .introFrame {
+    position: relative;
+    overflow: scroll;
+  }
+  .introFrame h1, h3 {
+    text-align: left;
+  }
+  .introFrame ul {
+    width: 50%;
+  }
+  .introFrame .myPhoto {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%)
+  }
 
-
+}

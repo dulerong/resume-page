@@ -57,6 +57,27 @@ const text = {
             2: 'Modeled to work as a real Calculator',
             3: 'Front-End: React.js',
             4: 'CLICK TO SEE',
+        },
+        projectDrumMachine: {
+            0: 'Drum Machine',
+            1: 'Title: Drum machine',
+            2: 'Modeled after an imaginary DJ table',
+            3: 'Front-End: React.js',
+            4: 'CLICK TO SEE',
+        },
+        projectTimerClock: {
+            0: 'Timer Clock',
+            1: 'Title: Timer Clock',
+            2: 'Modeled after a timer',
+            3: 'Front-End: React.js',
+            4: 'CLICK TO SEE',
+        },
+        projectRandomQuote: {
+            0: 'Random Quote Machine',
+            1: 'Title: Random Quote Machine',
+            2: 'Randomly displays my favorite quotes in life',
+            3: 'Front-End: jQuery',
+            4: 'CLICK TO SEE',
         }
     },
     chinese: {
@@ -117,6 +138,27 @@ const text = {
             2: '計算機為主題的單頁應用程式Single Page Application',
             3: '前端: React.js',
             4: '按一下看看它!',
+        },
+        projectDrumMachine: {
+            0: '打鼓器',
+            1: '標題: 打鼓器',
+            2: '打鼓器DJ盤為主題的單頁應用程式Single Page Application',
+            3: '前端: React.js',
+            4: '按一下看看它!',
+        },
+        projectTimerClock: {
+            0: '碼表',
+            1: '標題: 碼表',
+            2: '碼表為主題的單頁應用程式Single Page Application',
+            3: '前端: React.js',
+            4: '按一下看看它!',
+        },
+        projectRandomQuote: {
+            0: '隨機名言顯示器',
+            1: '標題: 隨機名言顯示器e',
+            2: '隨機顯示我最喜歡的作者的名言',
+            3: '前端: jQuery',
+            4: '按一下看看它!',
         }
     },
     japanese: {
@@ -176,6 +218,27 @@ const text = {
             1: '標題: 計算機ＵＩ',
             2: '計算機をイメージにしたSPA (SINGLE PAGE APPLICATION)',
             3: 'フロントエンド: React.js',
+            4: '押して閲覧！',
+        },
+        projectDrumMachine: {
+            0: 'ドラムマシン',
+            1: '標題: ドラムマシン',
+            2: 'ＤＪ盤をイメージにしたSPA (SINGLE PAGE APPLICATION)',
+            3: 'フロントエンド: React.js',
+            4: '押して閲覧！',
+        },
+        projectTimerClock: {
+            0: 'タイマー時計',
+            1: '標題: タイマー時計',
+            2: '運動用タイマーをイメージに作ったSPA (SINGLE PAGE APPLICATION)',
+            3: 'フロントエンド: React.js',
+            4: '押して閲覧！',
+        },
+        projectRandomQuote: {
+            0: 'ランダム名言表示機',
+            1: '標題: ランダム名言表示機',
+            2: 'ランダムに自分の好きな作者の名言を表示する',
+            3: 'フロントエンド: jQuery',
             4: '押して閲覧！',
         }
     }

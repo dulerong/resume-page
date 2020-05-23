@@ -2,24 +2,24 @@ import React from 'react'
 
 class DrumMachine extends React.Component {
     render(){
+      let text = this.props.text
+      let language = this.props.language
         return(
-        <span className='projectFrame hover-display-detail hover-transform-scale font-family-arial'>
-            <p className='margin-20px font-family-lobster font-size-30px'>Drum Machine</p>
-            <div className='flex-center overflow position-relative'>
-              <img className='projectImg' src={this.props.DrumMachine} alt=''/>
+        <span className='projectFrame'>
+            <h1>{text[language].projectDrumMachine[0]}</h1>
+            <div className='projectImg'>
+              <img src={this.props.DrumMachine} alt=''/>
             </div>
             <div className='imgDetail'>
-                <h1>Title: Drum machine</h1>
-                <p className='margin-b-10px'>Modeled after an imaginary DJ table</p>
-                <p>Front-End: React.js</p>
-                <p>Sound: AWS</p>
-                <div className='text-align margin-10px'>
-                  <a 
-                    className='inline-block bg-white font-color-black padding-10px ' 
+                <h2>{text[language].projectDrumMachine[1]}</h2>
+                <p>{text[language].projectDrumMachine[2]}</p>
+                <p>{text[language].projectDrumMachine[3]}</p>
+                <div className='link'>
+                  <a
                     href="https://codepen.io/dulerong/full/MWYxWWe" 
                     target="_blank"
                     rel="noopener noreferrer">
-                    CLICK TO SEE
+                    {text[language].projectDrumMachine[4]}
                   </a>
                 </div>
               </div>

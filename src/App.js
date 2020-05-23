@@ -22,9 +22,9 @@ class App extends React.Component {
       showIntro: false,
       showProject: false,
       nextPage: false,
-      pageNumber: 1,
-      firstPage: 1,
-      lastPage: 3,
+      introPageNumber: 1,
+      introFirstPage: 1,
+      introLastPage: 2,
       mobilePageNumber: 1,
       mobileFirstPage: 1,
       mobileLastPage: 6,
@@ -34,22 +34,15 @@ class App extends React.Component {
     this.handleButton = this.handleButton.bind(this)
     this.handleLanguage = this.handleLanguage.bind(this)
     this.handlePage = this.handlePage.bind(this)
-    this.handleMobilePage = this.handleMobilePage.bind(this)
     this.handleToggleList = this.handleToggleList.bind(this)
   }
   handlePage(e){
-    if(e.target.id === 'nextPage'){
-      this.state.pageNumber === this.state.lastPage ?
-        this.setState({pageNumber: this.state.firstPage}) :
-        this.setState({pageNumber: this.state.pageNumber+1})
+    if(e.target.id === 'introNextPage'){
+      this.setState({introPageNumber: this.state.introPageNumber+1})
     }
-    if(e.target.id === 'prevPage'){
-      this.state.pageNumber === this.state.firstPage ?
-        this.setState({pageNumber: this.state.lastPage}) :
-        this.setState({pageNumber: this.state.pageNumber-1})
+    if(e.target.id === 'introPrevPage'){
+      this.setState({introPageNumber: this.state.introPageNumber-1})
     }
-  }
-  handleMobilePage(e){
     if(e.target.id === 'mobileNextPage'){
         this.setState({mobilePageNumber: this.state.mobilePageNumber+1})
     }
@@ -58,6 +51,7 @@ class App extends React.Component {
     }
   }
   handleLanguage(e){
+    this.setState({toggleList: false})
     this.setState({language: e.target.id})
   }
   handleToggleList(e){
@@ -94,6 +88,10 @@ class App extends React.Component {
         <IntroSection
           text={text}
           language={this.state.language}
+          handlePage={this.handlePage}
+          introPageNumber={this.state.introPageNumber}
+          introFirstPage={this.state.introFirstPage}
+          introLastPage={this.state.introLastPage}
           showIntro={this.state.showIntro} 
           handleButton={this.handleButton}
           windowClose={windowClose}
@@ -101,16 +99,12 @@ class App extends React.Component {
         <ProjectSection 
           text={text}
           language={this.state.language}
-          handleMobilePage={this.handleMobilePage}
+          handlePage={this.handlePage}
           mobileFirstPage={this.state.mobileFirstPage}
           mobileLastPage={this.state.mobileLastPage}
           mobilePageNumber={this.state.mobilePageNumber}
-          firstPage={this.state.firstPage}
-          lastPage={this.state.lastPage}
-          pageNumber={this.state.pageNumber}
           showProject={this.state.showProject}
           nextPage={this.state.nextPage}
-          handlePage={this.handlePage}
           handleButton={this.handleButton}
           JapanPopulation={JapanPopulation}
           EmailViewer={EmailViewer}

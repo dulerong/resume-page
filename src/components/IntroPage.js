@@ -5,14 +5,36 @@ import Programming from './background/Programming.js'
 
 class IntroPage extends React.Component {
     render(){
-        let sldieBox = this.props.showIntro?
+        let slideBox = this.props.showIntro?
         'introSlideBox left-50' : 'introSlideBox left-150'
 
-        let text = this.props.text
-        let language = this.props.language
+        let introPageDisplay = 'introPageDisplay page'+this.props.introPageNumber 
+
+        let dot1 = this.props.introPageNumber === 1 ? 'dot bg-black' : 'dot'
+        let dot2 = this.props.introPageNumber === 2 ? 'dot bg-black' : 'dot'
+
+        let prevPage = this.props.introPageNumber === this.props.introFirstPage ? 'display-none' : 'prevPage'
+        let nextPage = this.props.introPageNumber === this.props.introLastPage ? 'display-none' : 'nextPage'
+
         return(
-        <div className={sldieBox}>
-            <div className='desktop position-relative flex-space-between box-sizing height-100pct'>
+        <div className={slideBox}>
+          <div className='dotDisplay'>
+            <span className={dot1}></span>
+            <span className={dot2}></span>
+          </div>
+          <div onClick={this.props.handlePage} id='introPrevPage' className={prevPage}>
+            <i id='introPrevPage' className="fa fa-arrow-left" />
+          </div>
+          <div onClick={this.props.handlePage} id='introNextPage' className={nextPage}>
+            <i id='introNextPage' className="fa fa-arrow-right" />
+          </div>
+          <div
+            className='closeButton' 
+            onClick={this.props.handleButton}>
+              <i id='intro' className="fa fa-window-close"></i>
+          </div>
+          <div className='introContainer'>
+            <div className={introPageDisplay}>
               <Personal
                 text={this.props.text}
                 language={this.props.language}
@@ -20,27 +42,8 @@ class IntroPage extends React.Component {
               <Programming                 
                 text={this.props.text}
                 language={this.props.language}/>
-              <button 
-                id='intro'
-                className='position-absolute right-0 bottom-0 padding-x-30px padding-y-10px bg-black font-color-white hover' 
-                onClick={this.props.handleButton}>
-                  {text[language].clickToClose}
-              </button>
             </div>
-            <div className='mobile position-relative box-sizing height-100pct overflow-scroll'>
-              <Personal
-                text={this.props.text}
-                language={this.props.language}
-                CodeyDu={this.props.CodeyDu}/>
-              <Programming 
-                text={this.props.text}
-                language={this.props.language}/>
-              <div
-                className='position-absolute left-100 top-0 transform-x-100pct font-size-30px hover-cursor' 
-                onClick={this.props.handleButton}>
-                  <i id='intro' className="fa fa-window-close"></i>
-              </div>
-            </div>
+          </div>
         </div>
         )
     }

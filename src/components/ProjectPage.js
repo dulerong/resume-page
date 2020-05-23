@@ -14,59 +14,49 @@ class ProjectPage extends React.Component {
         let slideBox = this.props.showProject?
         'projectSlideBox left-50' : 'projectSlideBox left-150'
 
-        let pageDisplay = 'pageDisplay page'+this.props.pageNumber
-        let mobilePageDisplay = 'pageDisplay page'+this.props.mobilePageNumber
-
-        let projectPrevPage = this.props.pageNumber === this.props.firstPage ? 'display-none' : 'projectPrevPage'
-        let projectNextPage = this.props.pageNumber === this.props.lastPage ? 'display-none' : 'projectNextPage'
+        let pageDisplay = 'pageDisplay page'+this.props.mobilePageNumber
         
-        let mobileProjectPrevPage = this.props.mobilePageNumber === this.props.mobileFirstPage ? 'display-none' : 'projectPrevPage'
-        let mobileProjectNextPage = this.props.mobilePageNumber === this.props.mobileLastPage ? 'display-none' : 'projectNextPage'
+        let prevPage = this.props.mobilePageNumber === this.props.mobileFirstPage ? 'display-none' : 'prevPage'
+        let nextPage = this.props.mobilePageNumber === this.props.mobileLastPage ? 'display-none' : 'nextPage'
+        
+        let dot1 = this.props.mobilePageNumber === 1 ? 'dot bg-black' : 'dot'
+        let dot2 = this.props.mobilePageNumber === 2 ? 'dot bg-black' : 'dot'
+        let dot3 = this.props.mobilePageNumber === 3 ? 'dot bg-black' : 'dot'
+        let dot4 = this.props.mobilePageNumber === 4 ? 'dot bg-black' : 'dot'
+        let dot5 = this.props.mobilePageNumber === 5 ? 'dot bg-black' : 'dot'
+        let dot6 = this.props.mobilePageNumber === 6 ? 'dot bg-black' : 'dot'
 
         return(
         <div className={slideBox}>
-            <div className='desktop height-100pct'>
-              <div className={pageDisplay}>
-                <JapanPop JapanPopulation={this.props.JapanPopulation} text={text} language={language}/>
-                <EmailUI EmailViewer={this.props.EmailViewer} text={text} language={language}/>
-                <Calculator Calculator={this.props.Calculator} text={text} language={language}/>
-                <DrumMachine DrumMachine={this.props.DrumMachine} text={text} language={language}/>
-                <TimerClock TimerClock={this.props.TimerClock} text={text} language={language}/>
-                <RandomQuote RandomQuote={this.props.RandomQuote} text={text} language={language}/>
-                <div
-                  className='position-absolute left-50 bottom-0 transform-x-50pct font-size-30px hover-cursor' 
-                  onClick={this.props.handleButton}>
-                    <i id='project' className="fa fa-window-close"></i>
-                </div>
-                <div onClick={this.props.handlePage} id='prevPage' className={projectPrevPage}>
-                  <i id='prevPage' className="fa fa-arrow-left" />
-                </div>
-                <div onClick={this.props.handlePage} id='nextPage' className={projectNextPage}>
-                  <i id='nextPage' className="fa fa-arrow-right" />
-                </div>
-              </div>
+          <div className='dotDisplay'>
+            <span className={dot1}></span>
+            <span className={dot2}></span>
+            <span className={dot3}></span>
+            <span className={dot4}></span>
+            <span className={dot5}></span>
+            <span className={dot6}></span>
+          </div>
+          <div onClick={this.props.handlePage} id='mobilePrevPage' className={prevPage}>
+            <i id='mobilePrevPage' className="fa fa-arrow-left" />
+          </div>
+          <div onClick={this.props.handlePage} id='mobileNextPage' className={nextPage}>
+            <i id='mobileNextPage' className="fa fa-arrow-right" />
+          </div>
+          <div
+            className='closeButton' 
+            onClick={this.props.handleButton}>
+              <i id='project' className="fa fa-window-close"></i>
+          </div>
+          <div className='projectContainer'>
+            <div className={pageDisplay}>
+              <JapanPop JapanPopulation={this.props.JapanPopulation} text={text} language={language}/>
+              <EmailUI EmailViewer={this.props.EmailViewer} text={text} language={language}/>
+              <Calculator Calculator={this.props.Calculator} text={text} language={language}/>
+              <DrumMachine DrumMachine={this.props.DrumMachine} text={text} language={language}/>
+              <TimerClock TimerClock={this.props.TimerClock} text={text} language={language}/>
+              <RandomQuote RandomQuote={this.props.RandomQuote} text={text} language={language}/>
             </div>
-            <div className='mobile height-100pct'>
-              <div className={mobilePageDisplay}>
-                <JapanPop JapanPopulation={this.props.JapanPopulation} text={text} language={language}/>
-                <EmailUI EmailViewer={this.props.EmailViewer} text={text} language={language}/>
-                <Calculator Calculator={this.props.Calculator} text={text} language={language}/>
-                <DrumMachine DrumMachine={this.props.DrumMachine} text={text} language={language}/>
-                <TimerClock TimerClock={this.props.TimerClock} text={text} language={language}/>
-                <RandomQuote RandomQuote={this.props.RandomQuote} text={text} language={language}/>
-                <div
-                  className='position-absolute left-50 bottom-0 transform-x-50pct font-size-30px hover-cursor' 
-                  onClick={this.props.handleButton}>
-                    <i id='project' className="fa fa-window-close"></i>
-                </div>
-                <div onClick={this.props.handleMobilePage} id='mobilePrevPage' className={mobileProjectPrevPage}>
-                  <i id='mobilePrevPage' className="fa fa-arrow-left" />
-                </div>
-                <div onClick={this.props.handleMobilePage} id='mobileNextPage' className={mobileProjectNextPage}>
-                  <i id='mobileNextPage' className="fa fa-arrow-right" />
-                </div>
-              </div>
-            </div>
+          </div>
         </div>
         )
     }
