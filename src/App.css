@@ -776,7 +776,7 @@ nav ul li .dropDownList li {
     height: 150px;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 650px) {
   .introSlideBox {
     height: 100vh;
   }
