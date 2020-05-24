@@ -1,24 +1,27 @@
 {
   "files": {
-    "main.css": "/resume-page/static/css/main.c361be2b.chunk.css",
-    "main.js": "/resume-page/static/js/main.2e82d770.chunk.js",
-    "main.js.map": "/resume-page/static/js/main.2e82d770.chunk.js.map",
+    "main.css": "/resume-page/static/css/main.bcdb303f.chunk.css",
+    "main.js": "/resume-page/static/js/main.0f00d517.chunk.js",
+    "main.js.map": "/resume-page/static/js/main.0f00d517.chunk.js.map",
     "runtime-main.js": "/resume-page/static/js/runtime-main.c5c3276b.js",
     "runtime-main.js.map": "/resume-page/static/js/runtime-main.c5c3276b.js.map",
     "static/css/2.89db6a98.chunk.css": "/resume-page/static/css/2.89db6a98.chunk.css",
-    "static/js/2.bc86d7de.chunk.js": "/resume-page/static/js/2.bc86d7de.chunk.js",
-    "static/js/2.bc86d7de.chunk.js.map": "/resume-page/static/js/2.bc86d7de.chunk.js.map",
+    "static/js/2.7acb0682.chunk.js": "/resume-page/static/js/2.7acb0682.chunk.js",
+    "static/js/2.7acb0682.chunk.js.map": "/resume-page/static/js/2.7acb0682.chunk.js.map",
     "index.html": "/resume-page/index.html",
-    "precache-manifest.6afe7281a05c500f190d2967b0e69c72.js": "/resume-page/precache-manifest.6afe7281a05c500f190d2967b0e69c72.js",
+    "precache-manifest.f7392301ba375389c8f257219161f4c9.js": "/resume-page/precache-manifest.f7392301ba375389c8f257219161f4c9.js",
     "service-worker.js": "/resume-page/service-worker.js",
     "static/css/2.89db6a98.chunk.css.map": "/resume-page/static/css/2.89db6a98.chunk.css.map",
-    "static/css/main.c361be2b.chunk.css.map": "/resume-page/static/css/main.c361be2b.chunk.css.map",
-    "static/js/2.bc86d7de.chunk.js.LICENSE.txt": "/resume-page/static/js/2.bc86d7de.chunk.js.LICENSE.txt",
+    "static/css/main.bcdb303f.chunk.css.map": "/resume-page/static/css/main.bcdb303f.chunk.css.map",
+    "static/js/2.7acb0682.chunk.js.LICENSE.txt": "/resume-page/static/js/2.7acb0682.chunk.js.LICENSE.txt",
     "static/media/calculator.png": "/resume-page/static/media/calculator.e2bfab9d.png",
     "static/media/codeydu.jpg": "/resume-page/static/media/codeydu.755490b1.jpg",
     "static/media/drum-machine.png": "/resume-page/static/media/drum-machine.d3db3614.png",
     "static/media/emailViewer.png": "/resume-page/static/media/emailViewer.755106a5.png",
     "static/media/font-awesome.min.css": "/resume-page/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/gozenzaki-back.JPG": "/resume-page/static/media/gozenzaki-back.76ad7b6d.JPG",
+    "static/media/gozenzaki-front.JPG": "/resume-page/static/media/gozenzaki-front.dcc0a187.JPG",
+    "static/media/gozenzaki.JPG": "/resume-page/static/media/gozenzaki.2ff930c2.JPG",
     "static/media/japan-population.png": "/resume-page/static/media/japan-population.e1633613.png",
     "static/media/timer-clock.png": "/resume-page/static/media/timer-clock.74e17e4b.png",
     "static/media/window-close-solid.svg": "/resume-page/static/media/window-close-solid.b1f2a762.svg"
@@ -26,8 +29,8 @@
   "entrypoints": [
     "static/js/runtime-main.c5c3276b.js",
     "static/css/2.89db6a98.chunk.css",
-    "static/js/2.bc86d7de.chunk.js",
-    "static/css/main.c361be2b.chunk.css",
-    "static/js/main.2e82d770.chunk.js"
+    "static/js/2.7acb0682.chunk.js",
+    "static/css/main.bcdb303f.chunk.css",
+    "static/js/main.0f00d517.chunk.js"
   ]
 }
