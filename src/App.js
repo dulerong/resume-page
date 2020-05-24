@@ -14,9 +14,7 @@ import RandomQuote from './images/random-quote.png'
 import CodeyDu from './images/codeydu.jpg'
 import windowClose from './images/window-close-solid.svg'
 import text from './text.js'
-import gozenzaki from './images/gozenzaki.JPG'
-import gozenzakiFront from './images/gozenzaki-front.JPG'
-import gozenzakiBack from './images/gozenzaki-back.JPG'
+import gozenzakiFront from './images/gozenzaki-front-compressed.jpg'
 
 class App extends React.Component {
   constructor(props){
@@ -99,9 +97,7 @@ class App extends React.Component {
           handleButton={this.handleButton}
           windowClose={windowClose}
           CodeyDu={CodeyDu}
-          gozenzaki={gozenzaki}
-          gozenzakiFront={gozenzakiFront}
-          gozenzakiBack={gozenzakiBack}/>
+          gozenzakiFront={gozenzakiFront}/>
         <ProjectSection 
           text={text}
           language={this.state.language}
