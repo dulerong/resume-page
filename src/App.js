@@ -14,7 +14,7 @@ import RandomQuote from './images/random-quote.png'
 import CodeyDu from './images/codeydu.jpg'
 import windowClose from './images/window-close-solid.svg'
 import text from './text.js'
-import gozenzakiFront from './images/gozenzaki-front-compressed.jpg'
+import gozenzakiFront from './images/gozenzaki-front-compressed-25.JPG'
 
 class App extends React.Component {
   constructor(props){
