@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "413ce0978961ef4997bc41527144f01d",
+    "revision": "7a8e7036198874e305a3b0c0a99ff7d7",
     "url": "/resume-page/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/resume-page/static/css/2.89db6a98.chunk.css"
   },
   {
-    "revision": "e6dbefa9d9e13c06e0e6",
+    "revision": "a0479a8f73c0658b1129",
     "url": "/resume-page/static/css/main.bcdb303f.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/resume-page/static/js/2.ac4a5c5a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e6dbefa9d9e13c06e0e6",
-    "url": "/resume-page/static/js/main.e666efb2.chunk.js"
+    "revision": "a0479a8f73c0658b1129",
+    "url": "/resume-page/static/js/main.db8e7ee3.chunk.js"
   },
   {
     "revision": "8df38dfcbeea060cb768",
@@ -64,8 +64,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/resume-page/static/media/fontawesome-webfont.fee66e71.woff"
   },
   {
-    "revision": "57baec2c3e05a531e0ed5dfe7e72a177",
-    "url": "/resume-page/static/media/gozenzaki-front-compressed.57baec2c.jpg"
+    "revision": "3e59d631691cf7366c057d93651bc3b8",
+    "url": "/resume-page/static/media/gozenzaki-front-compressed-25.3e59d631.JPG"
   },
   {
     "revision": "e1633613d030f38f634515230febde65",
