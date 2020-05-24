@@ -13,7 +13,7 @@ class NavBar extends React.Component {
         <nav>
             <span className='logo'>{text[language].logo}</span>
             <ul className={toggleList}>
-              <li><a href="#about" onClick={this.props.handleButton}>{text[language].aboutMe}</a></li>
+              <li><a href="#about" onClick={this.props.handleButton} id='intro'>{text[language].aboutMe}</a></li>
               <li><a href="#projects" onClick={this.props.handleButton}>{text[language].project}</a></li>
               <li><a href="###">{text[language].language}</a>
                 <ul className='dropDownList'>

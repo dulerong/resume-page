@@ -8,6 +8,7 @@ const text = {
         project: 'PROJECTS',
         language: 'LANGUAGE',
         clickToClose: 'CLICK TO CLOSE',
+        coverImage: 'MY NAME IS CODEY',
         personalBackground: {
             title: 'Personal Background',
             1: 'Born in Taiwan, immigrated to Canada at age 13, year 2000',
@@ -89,6 +90,7 @@ const text = {
         project: '專案',
         language: '語言',
         clickToClose: '關閉',
+        coverImage: '我的名子是CODEY',
         personalBackground: {
             title: '我的背景',
             1: '台灣出身, 13歲時移民加拿大, 西元2000年',
@@ -170,6 +172,7 @@ const text = {
         project: 'プロジェクト',
         language: '言語',
         clickToClose: '閉じる',
+        coverImage: '私はCODEYです。',
         personalBackground: {
             title: '自分について',
             1: '台湾生まれ, 2000年頃13歳時カナダに移民',

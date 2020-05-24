@@ -59,11 +59,14 @@ nav {
   position: fixed;
   top: 0px;
   width: 100%;
-  z-index: 10;
+  z-index: 20;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 75px;
   text-align: center;
+}
+nav .logo {
+  font-weight: bold;
 }
 nav ul {
   margin: 0;
@@ -72,6 +75,7 @@ nav ul {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  font-weight: bold;
 }
 nav ul li {
   width: 120px;
@@ -96,9 +100,6 @@ nav ul li .dropDownList {
   background-color: black;
   display: none;
 }
-nav ul li .dropDownList li {
-  border-bottom: solid white 1px;
-}
 .closeButton {
   z-index: 20;
 }
@@ -116,20 +117,89 @@ nav ul li .dropDownList li {
   font-family: lobster;
   font-size: 30px;
   margin-bottom: 5px;
+  z-index: 10;
+  display: none;
 }
 .introSection button {
   padding: 10px 30px 10px 30px;
   background-color: black;
   color: white;
+  z-index: 10;
+  display: none;
 }
 .introSection button:hover {
   background-color: chocolate;
+}
+.introSection .textEffectTop {
+  width: 100%;
+  height: 25%;
+  font-size: 10vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  mix-blend-mode: overlay;
+}
+.introSection .textEffectMiddleTop {
+  width: 100%;
+  height: 25%;
+  font-size: 10vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+  position: absolute;
+  top: 25%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  mix-blend-mode: multiply;
+}
+.introSection .textEffectMiddleBottom {
+  width: 100%;
+  height: 25%;
+  font-size: 10vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  mix-blend-mode: overlay;
+}
+.introSection .textEffectBottom {
+  width: 100%;
+  height: 25%;
+  font-size: 10vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  mix-blend-mode: multiply;
+}
+.introSection .coverImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .introSlideBox {
   position: absolute;
   top: 53%;
   transform: translate(-50%, -50%);
-  background-color: white;
   width: 75vw;
   height: 75vh;
   transition: 0.5s;
@@ -137,12 +207,14 @@ nav ul li .dropDownList li {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 .introSlideBox .introContainer {
   width: 50vw;
   height: 100%;
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   overflow: hidden;
+  background-color: white;
 }
 .introSlideBox .introContainer .introPageDisplay {
   width: 200%;
@@ -192,10 +264,14 @@ nav ul li .dropDownList li {
   font-family: lobster;
   font-size: 30px;
   margin-bottom: 5px;
+  color: white;
 }
 .projectSection button {
   padding: 10px 30px 10px 30px;
-  background-color: black;
+  border: solid 1px;
+  border-radius: 10px;
+  background-color: transparent;
+  font-size: 15px;
   color: white;
 }
 .projectSection button:hover {
@@ -210,6 +286,7 @@ nav ul li .dropDownList li {
   font-family: Arial, Helvetica, sans-serif;
   background-color: black;
   color: white;
+  position: relative;
 }
 .bottomBannerInfo{
   height: 100%;
@@ -294,9 +371,17 @@ nav ul li .dropDownList li {
 }
 .projectFrame .imgDetail .link a {
   display: inline-block;
-  background-color: white;
-  color: black;
+  background-color: transparent;
+  color: white;
   padding: 10px;
+  transition: 0.5s;
+  font-size: 20px;
+  font-weight: bold;
+  border: solid 1px;
+  border-radius: 10px;
+}
+.projectFrame .imgDetail .link a:hover {
+  background-color: chocolate;
 }
 .nextPage {
   position: absolute;
@@ -386,307 +471,20 @@ nav ul li .dropDownList li {
 .bg-black {
   background-color: black;
 }
-.bg-lightblue {
-  background-color: lightblue;
-}
-.bg-gray {
-  background-color: gray;
-}
-.bg-rgba-alpha {
-  background: rgba(0, 0, 0, 0.8)
-}
-.bg-white {
-  background-color: white;
-}
-.block {
-  display: block;
-}
-.border-1px {
-  border: solid 1px;
-}
-.border-5px-pink {
-  border: solid 5px pink;
-}
-.border-b-1px {
-  border-bottom: solid 1px;
-}
-.border-radius {
-  border-radius: 5px;
-}
-.bottom-0 {
-  bottom: 0%;
-}
-.box-sizing {
-  box-sizing: border-box;
+.bg-chocolate {
+  background-color: chocolate;
 }
 .display-none {
   display: none;
 }
-.flex {
-  display: flex;
-}
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
-.flex-space-around {
-  display: flex;
-  justify-content: space-around;
-}
-.flex-space-between {
-  display: flex;
-  justify-content: space-between;
-}
-.flex-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.float-left {
-  float: left;
-}
-.float-right {
-  float: right;
-}
-.font-color-white {
-  color: white;
-}
-.font-color-pink {
-  color: pink
-}
-.font-color-black {
-  color: black;
-}
-.font-family-arial {
-  font-family: Arial, Helvetica, sans-serif;
-}
-.font-family-lobster {
-  font-family: Lobster;
-}
-.font-size-small {
-  font-size: small;
-}
-.font-size-3vw {
-  font-size: 3vw;
-}
-.font-size-20px {
-  font-size: 20px;
-}
-.font-size-25px {
-  font-size: 25px;
-}
-.font-size-30px {
-  font-size: 30px;
-}
-.height-75pct {
-  height: 75%;
-}
 .height-100pct {
   height: 100%;
-}
-.height-400pct {
-  height: 400%;
-}
-.height-75vh {
-  height: 75vh;
-}
-.height-85vh {
-  height: 85vh;
-}
-.height-90vh {
-  height: 90vh;
-}
-.height-100vh {
-  height: 100vh;
-}
-.height-75px {
-  height: 75px;
-}
-
-.hover-cursor:hover {
-  cursor: pointer;
-}
-
-
-.inline-block {
-  display: inline-block;
-}
-.left-0 {
-  left: 0%;
-}
-.left-25 {
-  left: 25%;
 }
 .left-50 {
   left: 50%;
 }
-.left-100 {
-  left: 100%;
-}
 .left-150 {
   left: 150%;
-}
-.left-minus100 {
-  left: -100%;
-}
-.margin-0 {
-  margin: 0px;
-}
-.margin-10px {
-  margin: 10px;
-}
-.margin-20px {
-  margin: 20px;
-}
-.margin-b-10px {
-  margin-bottom: 10px;
-}
-.margin-l-minus100pct{
-  margin-left: -100%;
-}
-.margin-l-20px {
-  margin-left: 20px;
-}
-.margin-r-20px {
-  margin-right: 20px;
-}
-.margin-x-10px {
-  margin: 0px 10px 0px 10px;
-}
-.margin-x-20px {
-  margin: 0px 20px 0px 20px;
-}
-.max-w-20px {
-  max-width: 20px;
-}
-.max-w-30pct {
-  max-width: 30%;
-}
-.max-w-40pct {
-  max-width: 40%;
-}
-.max-w-90pct {
-  max-width: 90%;
-}
-.overflow {
-  overflow: hidden;
-}
-.overflow-scroll {
-  overflow: scroll;
-}
-.padding-auto {
-  padding: auto;
-}
-.padding-0 {
-  padding: 0px;
-}
-.padding-10px {
-  padding: 10px;
-}
-.padding-x-10px {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.padding-x-30px {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.padding-y-5px {
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-.padding-y-10px {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.padding-y-30px {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-.position-absolute {
-  position: absolute;
-}
-.position-relative {
-  position: relative;
-}
-.position-fixed {
-  position: fixed;
-}
-.right-0 {
-  right: 0%;
-}
-.text-align {
-  text-align: center;
-}
-.top-0 {
-  top: 0%;
-}
-.top-50 {
-  top: 50%;
-}
-.top-75px {
-  top: 75px;
-}
-.top-100 {
-  top: 100%;
-}
-.top-150 {
-  top: 150%;
-}
-.transform {
-  transform: translate(-50%, -50%);
-}
-.transform-x-50pct{
-  transform: translateX(-50%)
-}
-.transform-x-100pct{
-  transform: translateX(-100%)
-}
-.transform-XY-50pct{
-  transform: translate(-50%, -50%);
-}
-.transform-scaleX{
-  transform: scaleX(-1);
-}
-.transition {
-  transition: 0.5s;
-}
-.vertical-align {
-  vertical-align: middle;
-}
-.width-25pct {
-  width: 50%;
-}
-.width-50pct {
-  width: 50%;
-}
-.width-100pct {
-  width: 100%;
-}
-.width-200pct {
-  width: 200%;
-}
-.width-300pct {
-  width: 300%;
-}
-.width-100px {
-  width: 100px;
-}
-.width-150px {
-  width: 150px;
-}
-.width-200px {
-  width: 100px;
-}
-.width-75vw {
-  width: 75vw;
-}
-.width-85vw {
-  width: 85vw;
-}
-.width-90vw {
-  width: 90vw;
 }
 
 @media (max-width: 1000px) {
@@ -727,6 +525,22 @@ nav ul li .dropDownList li {
   .dotDisplay {
     bottom: 3%;
     z-index: 20;
+  }
+  .introSection .textEffectTop {
+    font-size: 9vw;
+    line-height: 150px;
+  }
+  .introSection .textEffectMiddleTop {
+    font-size: 9vw;
+    line-height: 150px;
+  }
+  .introSection .textEffectMiddleBottom {
+    font-size: 9vw;
+    line-height: 150px;
+  }
+  .introSection .textEffectBottom {
+    font-size: 9vw;
+    line-height: 150px;
   }
   .introSlideBox {
     width: 95vw;
@@ -776,7 +590,7 @@ nav ul li .dropDownList li {
     height: 150px;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 670px) {
   .introSlideBox {
     height: 100vh;
   }
@@ -790,6 +604,18 @@ nav ul li .dropDownList li {
   }
   .introSection .title {
     font-size: 23px;
+  }
+  .introSection .textEffectTop {
+    line-height: 150px;
+  }
+  .introSection .textEffectMiddleTop {
+    line-height: 150px;
+  }
+  .introSection .textEffectMiddleBottom {
+    line-height: 150px;
+  }
+  .introSection .textEffectBottom {
+    line-height: 150px;
   }
   .projectSection .title {
     font-size: 23px;
@@ -824,6 +650,18 @@ nav ul li .dropDownList li {
     position: absolute;
     left: 0;
     top: 75px;
+  }
+  .introSection .textEffectTop {
+    line-height: 75px;
+  }
+  .introSection .textEffectMiddleTop {
+    line-height: 75px;
+  }
+  .introSection .textEffectMiddleBottom {
+    line-height: 75px;
+  }
+  .introSection .textEffectBottom {
+    line-height: 75px;
   }
   .introFrame {
     position: relative;

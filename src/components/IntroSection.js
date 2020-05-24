@@ -7,12 +7,6 @@ class IntroSection extends React.Component{
         let language = this.props.language
         return(
         <div className='introSection' id='about'>
-            <p className='title'>{text[language].myNameIs}<i className="fa fa-bug" /></p>
-            <button 
-              id='intro'
-              onClick={this.props.handleButton}>
-                {text[language].clickToKnowCodey}
-            </button>
             <IntroPage
               text={text}
               language={language}
@@ -24,6 +18,17 @@ class IntroSection extends React.Component{
               showIntro={this.props.showIntro} 
               handleButton={this.props.handleButton}
               CodeyDu={this.props.CodeyDu}/>
+            <img className='coverImage' src={this.props.gozenzakiFront} alt='' />
+            <h1 className='textEffectTop'>{text[language].coverImage}</h1>
+            <h1 className='textEffectMiddleTop'>{text[language].coverImage}</h1>
+            <h1 className='textEffectMiddleBottom'>{text[language].coverImage}</h1>
+            <h1 className='textEffectBottom'>{text[language].coverImage}</h1>
+            <p className='title'>{text[language].myNameIs}<i className="fa fa-bug" /></p>
+            <button 
+              id='intro'
+              onClick={this.props.handleButton}>
+                {text[language].clickToKnowCodey}
+            </button>
         </div>
         )
     }
