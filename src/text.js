@@ -90,7 +90,7 @@ const text = {
         project: '專案',
         language: '語言',
         clickToClose: '關閉',
-        coverImage: '我的名子是CODEY',
+        coverImage: '我的名字是CODEY',
         personalBackground: {
             title: '我的背景',
             1: '台灣出身, 13歲時移民加拿大, 西元2000年',

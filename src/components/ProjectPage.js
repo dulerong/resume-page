@@ -14,33 +14,33 @@ class ProjectPage extends React.Component {
         let slideBox = this.props.showProject?
         'projectSlideBox left-50' : 'projectSlideBox left-150'
 
-        let pageDisplay = 'pageDisplay page'+this.props.mobilePageNumber
+        let pageDisplay = 'pageDisplay page'+this.props.projectPageNumber
         
-        let prevPage = this.props.mobilePageNumber === this.props.mobileFirstPage ? 'display-none' : 'prevPage'
-        let nextPage = this.props.mobilePageNumber === this.props.mobileLastPage ? 'display-none' : 'nextPage'
+        let prevPage = this.props.projectPageNumber === this.props.projectFirstPage ? 'display-none' : 'prevPage'
+        let nextPage = this.props.projectPageNumber === this.props.projectLastPage ? 'display-none' : 'nextPage'
         
-        let dot1 = this.props.mobilePageNumber === 1 ? 'dot bg-black' : 'dot'
-        let dot2 = this.props.mobilePageNumber === 2 ? 'dot bg-black' : 'dot'
-        let dot3 = this.props.mobilePageNumber === 3 ? 'dot bg-black' : 'dot'
-        let dot4 = this.props.mobilePageNumber === 4 ? 'dot bg-black' : 'dot'
-        let dot5 = this.props.mobilePageNumber === 5 ? 'dot bg-black' : 'dot'
-        let dot6 = this.props.mobilePageNumber === 6 ? 'dot bg-black' : 'dot'
+        let dot1 = this.props.projectPageNumber === 1 ? 'dot bg-black' : 'dot'
+        let dot2 = this.props.projectPageNumber === 2 ? 'dot bg-black' : 'dot'
+        let dot3 = this.props.projectPageNumber === 3 ? 'dot bg-black' : 'dot'
+        let dot4 = this.props.projectPageNumber === 4 ? 'dot bg-black' : 'dot'
+        let dot5 = this.props.projectPageNumber === 5 ? 'dot bg-black' : 'dot'
+        let dot6 = this.props.projectPageNumber === 6 ? 'dot bg-black' : 'dot'
 
         return(
         <div className={slideBox}>
           <div className='dotDisplay'>
-            <span className={dot1}></span>
-            <span className={dot2}></span>
-            <span className={dot3}></span>
-            <span className={dot4}></span>
-            <span className={dot5}></span>
-            <span className={dot6}></span>
+            <span id ='projectpage1' className={dot1} onClick={this.props.handlePage}></span>
+            <span id ='projectpage2' className={dot2} onClick={this.props.handlePage}></span>
+            <span id ='projectpage3' className={dot3} onClick={this.props.handlePage}></span>
+            <span id ='projectpage4' className={dot4} onClick={this.props.handlePage}></span>
+            <span id ='projectpage5' className={dot5} onClick={this.props.handlePage}></span>
+            <span id ='projectpage6' className={dot6} onClick={this.props.handlePage}></span>
           </div>
-          <div onClick={this.props.handlePage} id='mobilePrevPage' className={prevPage}>
-            <i id='mobilePrevPage' className="fa fa-arrow-left" />
+          <div onClick={this.props.handlePage} id='projectPrevPage' className={prevPage}>
+            <i id='projectPrevPage' className="fa fa-arrow-left" />
           </div>
-          <div onClick={this.props.handlePage} id='mobileNextPage' className={nextPage}>
-            <i id='mobileNextPage' className="fa fa-arrow-right" />
+          <div onClick={this.props.handlePage} id='projectNextPage' className={nextPage}>
+            <i id='projectNextPage' className="fa fa-arrow-right" />
           </div>
           <div
             className='closeButton' 

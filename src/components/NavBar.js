@@ -9,8 +9,10 @@ class NavBar extends React.Component {
 
         let text = this.props.text
         let language = this.props.language
+
+        let visible = this.props.visible ? '' : 'hidden'
         return(
-        <nav>
+        <nav className={visible}>
             <span className='logo'>{text[language].logo}</span>
             <ul className={toggleList}>
               <li><a href="#about" onClick={this.props.handleButton} id='intro'>{text[language].aboutMe}</a></li>

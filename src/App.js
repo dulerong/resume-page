@@ -26,30 +26,61 @@ class App extends React.Component {
       introPageNumber: 1,
       introFirstPage: 1,
       introLastPage: 2,
-      mobilePageNumber: 1,
-      mobileFirstPage: 1,
-      mobileLastPage: 6,
+      projectPageNumber: 1,
+      projectFirstPage: 1,
+      projectLastPage: 6,
       toggleList: false,
-      language: 'english'
+      language: 'english',
+      prevScrollpos: window.pageYOffset,
+      visible: true
     }
     this.handleButton = this.handleButton.bind(this)
     this.handleLanguage = this.handleLanguage.bind(this)
     this.handlePage = this.handlePage.bind(this)
     this.handleToggleList = this.handleToggleList.bind(this)
+    this.handleScroll = this.handleScroll.bind(this)
+  }
+  // Adds an event listener when the component is mount.
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  // Remove the event listener when the component is unmount.
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
   }
   handlePage(e){
+    if(e.target.id.slice(0,11) === 'projectpage'){
+      let page = Number(e.target.id.slice(-1))
+      this.setState({projectPageNumber: page})
+    }
+    if(e.target.id.slice(0,9) === 'intropage'){
+      let page = Number(e.target.id.slice(-1))
+      this.setState({introPageNumber: page})
+    }
     if(e.target.id === 'introNextPage'){
       this.setState({introPageNumber: this.state.introPageNumber+1})
     }
     if(e.target.id === 'introPrevPage'){
       this.setState({introPageNumber: this.state.introPageNumber-1})
     }
-    if(e.target.id === 'mobileNextPage'){
-        this.setState({mobilePageNumber: this.state.mobilePageNumber+1})
+    if(e.target.id === 'projectNextPage'){
+        this.setState({projectPageNumber: this.state.projectPageNumber+1})
     }
-    if(e.target.id === 'mobilePrevPage'){
-        this.setState({mobilePageNumber: this.state.mobilePageNumber-1})
+    if(e.target.id === 'projectPrevPage'){
+        this.setState({projectPageNumber: this.state.projectPageNumber-1})
     }
+  }
+  handleScroll() {
+    const prevScrollpos = this.state.prevScrollpos
+
+    const currentScrollPos = window.pageYOffset;
+    const visible = prevScrollpos > currentScrollPos;
+
+    this.setState({
+      prevScrollpos: currentScrollPos,
+      visible: visible
+    })
   }
   handleLanguage(e){
     this.setState({toggleList: false})
@@ -76,10 +107,11 @@ class App extends React.Component {
   }
 
   render(){
-  
+
   return (
       <div className="App">
         <NavBar 
+          visible={this.state.visible}
           text={text}
           language={this.state.language}
           handleLanguage={this.handleLanguage}
@@ -102,9 +134,9 @@ class App extends React.Component {
           text={text}
           language={this.state.language}
           handlePage={this.handlePage}
-          mobileFirstPage={this.state.mobileFirstPage}
-          mobileLastPage={this.state.mobileLastPage}
-          mobilePageNumber={this.state.mobilePageNumber}
+          projectFirstPage={this.state.projectFirstPage}
+          projectLastPage={this.state.projectLastPage}
+          projectPageNumber={this.state.projectPageNumber}
           showProject={this.state.showProject}
           nextPage={this.state.nextPage}
           handleButton={this.handleButton}

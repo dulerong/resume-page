@@ -50,6 +50,9 @@ button:hover {
 .mobile {
   display: none;
 }
+.hidden {
+  top: -75px;
+}
 nav {
   display: flex;
   justify-content: space-around;
@@ -64,6 +67,7 @@ nav {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 75px;
   text-align: center;
+  transition: 0.5s;
 }
 nav .logo {
   font-weight: bold;
@@ -99,9 +103,6 @@ nav ul li .dropDownList {
   width: 100%;
   background-color: black;
   display: none;
-}
-.closeButton {
-  z-index: 20;
 }
 .introSection {
   display: flex;
@@ -395,6 +396,7 @@ nav ul li .dropDownList {
   align-items: center;
   font-size: xx-large;
   z-index: 10;
+  font-size: 75px;
 }
 .nextPage:hover{
   background: rgba(0, 0, 0, 0.5);
@@ -414,6 +416,7 @@ nav ul li .dropDownList {
   align-items: center;
   font-size: xx-large;
   z-index: 10;
+  font-size: 75px;
 }
 .prevPage:hover{
   background: rgba(0, 0, 0, 0.5);
@@ -425,15 +428,17 @@ nav ul li .dropDownList {
   position: absolute;
   right: 0;
   top: 0;
-  font-size: 30px;
+  font-size: 50px;
   cursor: pointer;
+  z-index: 20;
 }
 .dotDisplay {
   position: absolute;
-  bottom: -10%;
+  bottom: 3%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
+  z-index: 30;
 }
 .dot {
   height: 25px;
@@ -442,7 +447,9 @@ nav ul li .dropDownList {
   border-radius: 50%;
   display: inline-block;
   transition: 0.5s;
-  margin-right: 10px;
+  margin-right: 15px;
+  margin-left: 15px;
+  cursor: pointer;
 }
 .page1{
   margin-left: 0%;
@@ -474,6 +481,9 @@ nav ul li .dropDownList {
 .bg-chocolate {
   background-color: chocolate;
 }
+.color-chocolate {
+  color: chocolate;
+}
 .display-none {
   display: none;
 }
@@ -488,6 +498,14 @@ nav ul li .dropDownList {
 }
 
 @media (max-width: 1000px) {
+  .fa-arrow-left {
+    position: absolute;
+    bottom: 10%;
+  }
+  .fa-arrow-right {
+    position: absolute;
+    bottom: 10%;
+  }
   .desktop {
     display: none;
   }
@@ -523,8 +541,8 @@ nav ul li .dropDownList {
     top: 225px;
   }
   .dotDisplay {
-    bottom: 3%;
     z-index: 20;
+    bottom: 3%;
   }
   .introSection .textEffectTop {
     font-size: 9vw;
@@ -591,6 +609,9 @@ nav ul li .dropDownList {
   }
 }
 @media (max-width: 670px) {
+  .closeButton {
+    font-size: 35px;
+  }
   .introSlideBox {
     height: 100vh;
   }

@@ -10,8 +10,8 @@ class IntroPage extends React.Component {
 
         let introPageDisplay = 'introPageDisplay page'+this.props.introPageNumber 
 
-        let dot1 = this.props.introPageNumber === 1 ? 'dot bg-chocolate' : 'dot'
-        let dot2 = this.props.introPageNumber === 2 ? 'dot bg-chocolate' : 'dot'
+        let dot1 = this.props.introPageNumber === 1 ? 'dot bg-black' : 'dot'
+        let dot2 = this.props.introPageNumber === 2 ? 'dot bg-black' : 'dot'
 
         let prevPage = this.props.introPageNumber === this.props.introFirstPage ? 'display-none' : 'prevPage'
         let nextPage = this.props.introPageNumber === this.props.introLastPage ? 'display-none' : 'nextPage'
@@ -19,8 +19,8 @@ class IntroPage extends React.Component {
         return(
         <div className={slideBox}>
           <div className='dotDisplay'>
-            <span className={dot1}></span>
-            <span className={dot2}></span>
+            <span id ='intropage1' className={dot1} onClick={this.props.handlePage}></span>
+            <span id ='intropage2' className={dot2} onClick={this.props.handlePage}></span>
           </div>
           <div onClick={this.props.handlePage} id='introPrevPage' className={prevPage}>
             <i id='introPrevPage' className="fa fa-arrow-left" />
