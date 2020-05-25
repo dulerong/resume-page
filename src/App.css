@@ -641,9 +641,6 @@ nav ul li .dropDownList {
   .projectSection .title {
     font-size: 23px;
   }
-  .projectSlideBox {
-    height: 100vh;
-  }
   .projectFrame h1 {
     font-size: 25px;
   }
@@ -700,5 +697,10 @@ nav ul li .dropDownList {
     top: 50%;
     transform: translateY(-50%)
   }
-
+  .projectSlideBox {
+    height: 100vh;
+  }
+  .projectFrame .projectImg img{
+    max-height: 250px;
+  }
 }
