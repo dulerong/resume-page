@@ -16,7 +16,7 @@ class Calculator extends React.Component {
                 <p>{text[language].projectCalculator[3]}</p>
                 <div className='link'>
                   <a
-                    href="https://codepen.io/dulerong/full/OJJdVaz/" 
+                    href="https://dulerong.github.io/calculator/" 
                     target="_blank"
                     rel="noopener noreferrer">
                     {text[language].projectCalculator[4]}
